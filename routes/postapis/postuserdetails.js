@@ -26,7 +26,7 @@ router.post('/signup', async (req, res) => {
           User_id:  new mongoose.Types.ObjectId(),
           Username: req.body.Username,
           Location: req.body.Location,
-          Password:  await  bcrypt.hash(req.body.Password, 10),
+          Password: bcrypt.hash(req.body.Password, 10),
           Email_id: req.body.Email_id,
           liked: req.body.liked
       })
