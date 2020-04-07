@@ -9,7 +9,7 @@ router.get('/:Username', getUser, (req, res) => {
     res.json(res.required__object)
   })
   
-
+/*
 //MIddleeware to check the token 
 async function checkAuth(req,result,next){
       try{
@@ -22,7 +22,7 @@ async function checkAuth(req,result,next){
           })
       }
 }
-
+*/
   // Middleware function for gettig userobject by ID
 async function getUser(req, res, next) {
     try {

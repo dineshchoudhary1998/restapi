@@ -53,6 +53,27 @@ app.use('/video', postvideoRouter)
 const userprofileRouter =require('./routes/getapis/getuserprofile')
 app.use('/getuser', userprofileRouter)
 
+const vendorprofileRouter =require('./routes/getapis/getvendorprofile')
+app.use('/getvendor', vendorprofileRouter)
+
+
+const trendingRouter =require('./routes/getapis/gettrending')
+app.use('/trending', trendingRouter)
+
+const exploreRouter =require('./routes/getapis/getexplore')
+app.use('/explore', exploreRouter)
+
+const nearmeRouter =require('./routes/getapis/getnearme')
+app.use('/nearme', nearmeRouter)
+
+
+const getcommentRouter =require('./routes/getapis/getcomments')
+app.use('/getcomment', getcommentRouter)
+
+const getreviewRouter =require('./routes/getapis/getreviews')
+app.use('/getreview', getreviewRouter)
+
+
 /*
 //Error handler
 app.use((err,req,res,next)=>{
