@@ -44,6 +44,10 @@ app.use('/like', postlikeRouter)
 
 const postreviewRouter =require('./routes/postapis/postreviews')
 app.use('/review', postreviewRouter)
+
+
+const postvideoRouter =require('./routes/postapis/postvideos')
+app.use('/video', postvideoRouter)
 /*
 //Error handler
 app.use((err,req,res,next)=>{
