@@ -7,7 +7,7 @@ const Vendor = require('../../models/vendorSchema');
 
 
 // Updating one video comment
-router.patch('/:id', getVendor, async (req, res) => {
+router.patch('/:id', checkAuth ,getVendor, async (req, res) => {
 
     res.required__object[0].Comments.push({
         "User_id":"ritik",
@@ -24,7 +24,7 @@ router.patch('/:id', getVendor, async (req, res) => {
   })
 
   //MIddleeware to check the token 
-async function checkAuth(req,result,next){
+async function checkAuth (req,result,next){
   try{
       const decoded= jwt.verify(req.body.token,process.env.JWT_KEY);
       console.log("Auth succeeded")
