@@ -7,7 +7,7 @@ const Vendor = require('../../models/vendorSchema');
 
 
 // Updating one video comment
-router.patch('/:id',checkAuth, getVendor, async (req, res) => {
+router.patch('/:id', getVendor, async (req, res) => {
 
     res.required__object[0].Comments.push({
         "User_id":"ritik",
