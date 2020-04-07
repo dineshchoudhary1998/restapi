@@ -28,8 +28,14 @@ app.use((req,res,next)=>{
     next( err)  
 })*/
 
+//POst apis
 const postuserRouter = require('./routes/postapis/postuserdetails')
 app.use('/user', postuserRouter)
+
+const postvendorRouter =require('./routes/postapis/postvendordetails')
+app.use('/vendor', postvendorRouter)
+
+
 /*
 //Error handler
 app.use((err,req,res,next)=>{
