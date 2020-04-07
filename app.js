@@ -48,6 +48,11 @@ app.use('/review', postreviewRouter)
 
 const postvideoRouter =require('./routes/postapis/postvideos')
 app.use('/video', postvideoRouter)
+
+//Getapis
+const userprofileRouter =require('./routes/getapis/getuserprofile')
+app.use('/getuser', userprofileRouter)
+
 /*
 //Error handler
 app.use((err,req,res,next)=>{
