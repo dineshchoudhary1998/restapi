@@ -20,17 +20,17 @@ mongoose.connect("mongodb+srv://@cluster0-ynfwn.mongodb.net/",
     console.log("Mongodb Connected");
 })
 
-
+/*
 //any routes which are not handled
 app.use((req,res,next)=>{
     const err=new Error("not found")
     err.status=404
     next( err)  
-})
+})*/
 
 const postuserRouter = require('./routes/postapis/postuserdetails')
 app.use('/user', postuserRouter)
-
+/*
 //Error handler
 app.use((err,req,res,next)=>{
     res.status(err.status|| 500)
@@ -41,7 +41,7 @@ app.use((err,req,res,next)=>{
         }
     })
 })
-
+*/
 const host=process.env.HOST || '0.0.0.0';
 const port=process.env.PORT || 3000;
 
