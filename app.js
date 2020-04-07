@@ -8,7 +8,7 @@ const app= express();
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-mongoose.connect(process.env.DB_URL,
+mongoose.connect(process.env.MONGO_URL,
     {
         dbName:'RestApi',
         user:'dinesh',
