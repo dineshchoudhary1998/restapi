@@ -7,7 +7,7 @@ const Userdetails =require('../../models/userSchema')
 
 // SIGNUP API+
 router.post('/signup', async (req, res) => {
-
+       console.log("INside signup")
        const foundemail= await Userdetails.findOne({"Email_id":req.body.Email_id})
        if(foundemail){
          return res.status(409).json({
