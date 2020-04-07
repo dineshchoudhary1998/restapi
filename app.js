@@ -35,6 +35,8 @@ app.use('/user', postuserRouter)
 const postvendorRouter =require('./routes/postapis/postvendordetails')
 app.use('/vendor', postvendorRouter)
 
+const postcommentRouter =require('./routes/postapis/postcomments')
+app.use('/comment', postcommentRouter)
 
 /*
 //Error handler
