@@ -7,7 +7,7 @@ const Userdetails =require('../../models/userSchema')
 
 // SIGNUP API+
 router.post('/signup', async (req, res) => {
-       console.log("INside signup")
+       console.log("INside signup"
        const foundemail= await Userdetails.findOne({"Email_id":req.body.Email_id})
        if(foundemail){
          return res.status(409).json({
@@ -26,7 +26,7 @@ router.post('/signup', async (req, res) => {
           User_id:  new mongoose.Types.ObjectId(),
           Username: req.body.Username,
           Location: req.body.Location,
-          Password: bcrypt.hash(req.body.Password, 10),
+          Password:  await  bcrypt.hash(req.body.Password, 10),
           Email_id: req.body.Email_id,
           liked: req.body.liked
       })
