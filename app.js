@@ -27,8 +27,8 @@ app.use((req,res,next)=>{
     err.status=404
     next( err)  
 })
-
-
+const postuserRouter = require('./routes/postapis/postuserdetails')
+app.use('/user', postuserRouter)
 
 //Error handler
 app.use((err,req,res,next)=>{
