@@ -8,13 +8,13 @@ const app= express();
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-mongoose.connect(process.env.MONGO_URL,
+mongoose.connect("mongodb+srv://@cluster0-ynfwn.mongodb.net/",
     {
         dbName:'Streetfood',
         user:'dinesh',
         pass:'dinabhai',
         useNewUrlParser:true,
-        useUnifiedTopology:true
+        useUnifiedTopology:true 
     }
 ).then(()=>{
     console.log("Mongodb Connected");
