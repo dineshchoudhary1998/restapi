@@ -41,6 +41,9 @@ app.use('/comment', postcommentRouter)
 const postlikeRouter =require('./routes/postapis/postlikes')
 app.use('/like', postlikeRouter)
 
+
+const postreviewRouter =require('./routes/postapis/postreviews')
+app.use('/review', postreviewRouter)
 /*
 //Error handler
 app.use((err,req,res,next)=>{
