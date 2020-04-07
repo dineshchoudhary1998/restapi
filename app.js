@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended:true}))
 
 mongoose.connect(process.env.MONGO_URL,
     {
-        dbName:'RestApi',
+        dbName:'Streetfood',
         user:'dinesh',
         pass:'dinabhai',
         useNewUrlParser:true,
