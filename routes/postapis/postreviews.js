@@ -7,8 +7,8 @@ const Vendor = require('../../models/vendorSchema');
 router.patch('/:id',checkAuth,getVendor, async (req, res) => {
   
     console.log(res.required__object[0].Reviews)
-    res.required__object[0].Reviews.unshift({
-        "User_id":"ritik",
+    res.required__object[0].Reviews.push({
+        "User_id":res.decoded.username,
         "Review":"Hello world"
     })
   
@@ -26,6 +26,7 @@ async function checkAuth(req,result,next){
   try{
       const decoded= jwt.verify(req.body.token,process.env.JWT_KEY);
       console.log("Auth succeeded")
+      result.decoded=decoded
       next();
   }catch(err){
       return result.status(401).json({
