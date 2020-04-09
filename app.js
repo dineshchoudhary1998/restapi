@@ -74,6 +74,11 @@ const getreviewRouter =require('./routes/getapis/getreviews')
 app.use('/getreview', getreviewRouter)
 
 
+const getvideoRouter =require('./routes/getapis/getvideo')
+app.use('/getvideo', getvideoRouter)
+
+
+
 /*
 //Error handler
 app.use((err,req,res,next)=>{
