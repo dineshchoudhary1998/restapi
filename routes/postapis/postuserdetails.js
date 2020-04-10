@@ -23,7 +23,7 @@ router.post('/signup', async (req, res) => {
       }
 
         const userdetails = new Userdetails({
-          User_id:  new mongoose.Types.ObjectId(),
+          Fullname:req.body.Fullname,
           Username: req.body.Username,
           Location: req.body.Location,
           Password:  await  bcrypt.hash(req.body.Password, 10),

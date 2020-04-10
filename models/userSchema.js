@@ -6,7 +6,7 @@ const likedVideos=new mongoose.Schema({
 },{ _id : false });
  
 const userDetails=new mongoose.Schema({
-        User_id:mongoose.Schema.Types.ObjectId,
+        Fullname:{type:String,required:true},
         Username:{type:String,required:true},
 		Location:{type:String,required:true},
 		Password:{type:String,required:true},

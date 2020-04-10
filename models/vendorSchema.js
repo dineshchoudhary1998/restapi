@@ -18,7 +18,11 @@ const Video = new mongoose.Schema({
         Description:String,
         Likes:Number,
         Views:Number,
-        Ratings:String,
+        Overall_ratings:String,
+        Hygiene:Number,
+        Taste:Number,
+        Price:Number,
+        Ingredients:[String],
         Comments:[Comment],
         Reviews:[Review]
 })
