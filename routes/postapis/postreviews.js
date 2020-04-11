@@ -24,7 +24,8 @@ router.patch('/:id',checkAuth,getVendor, async (req, res) => {
  //MIddleeware to check the token 
 async function checkAuth(req,result,next){
   try{
-      const decoded= jwt.verify(req.body.token,process.env.JWT_KEY);
+    const token =req.headers.authorization.split(" ")[1];
+      const decoded= jwt.verify(token,process.env.JWT_KEY);
       console.log("Auth succeeded")
       result.decoded=decoded
       next();
