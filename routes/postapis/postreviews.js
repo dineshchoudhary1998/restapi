@@ -9,7 +9,7 @@ router.patch('/:id',checkAuth,getVendor, async (req, res) => {
     console.log(res.required__object[0].Reviews)
     res.required__object[0].Reviews.push({
         "User_id":res.decoded.username,
-        "Review":"Hello world"
+        "Review":req.body.Review
     })
   
     try {   
