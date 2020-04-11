@@ -11,7 +11,7 @@ router.patch('/:id', checkAuth ,getVendor, async (req, res) => {
 
     res.required__object[0].Comments.push({
         "User_id":res.decoded.username,
-        "Comment":"adfadsaad"
+        "Comment":req.body.Comment
     })
   
     try {   
