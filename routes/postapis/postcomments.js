@@ -16,7 +16,7 @@ router.patch('/:id', checkAuth ,getVendor, async (req, res) => {
   
     try {   
       const updatedComment = await res.required__object[1].save()
-      res.json(updatedComment)
+      res.json("Comment posted successfully!!!")
     } catch(err) {
       res.status(400).json({ message: err.message })
     }

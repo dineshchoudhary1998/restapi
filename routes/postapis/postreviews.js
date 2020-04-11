@@ -14,7 +14,7 @@ router.patch('/:id',checkAuth,getVendor, async (req, res) => {
   
     try {   
       const updatedReview = await res.required__object[1].save()
-      res.json(updatedReview)
+      res.json("Review posted successfully")
     } catch(err) {
       res.status(400).json({ message: err.message })
     }

@@ -23,7 +23,7 @@ router.patch('/:id',checkAuth, getVendor, async (req, res) => {
                   } catch(err) {
                         res.status(400).json({ message: err.message })
                   }
-                   res.json(updatedLike)
+                   res.json("like posted successfully")
 
 
     } catch(err) {

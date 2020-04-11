@@ -8,7 +8,7 @@ router.post('/', async (req, res) => {
   
     try {
       const newvendor = await vendordetails.save()
-      res.status(201).json(newvendor)
+      res.status(201).json("Vendor created")
     } catch (err) {
       res.status(400).json({ message: err.message })
     }
