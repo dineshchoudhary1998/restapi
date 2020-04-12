@@ -77,6 +77,9 @@ app.use('/getreview', getreviewRouter)
 const getvideoRouter =require('./routes/getapis/getvideo')
 app.use('/getvideo', getvideoRouter)
 
+const getcategoryRouter =require('./routes/getapis/getcategory')
+app.use('/getcategory', getcategoryRouter)
+
 
 
 /*
